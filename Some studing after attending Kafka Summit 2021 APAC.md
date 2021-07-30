@@ -16,12 +16,35 @@ So basically, "Data at rest" is one strategy to process data which means to stor
 
 ​	So, as I mentioned above, the core idea of "Data at rest" is to passively collect tons of data and do some operations after a while. However, the core idea behind "Data in motion" is to set some conditions when a message or event (you can also say data.) fits these conditions then store it into system and push this message to the corresponding services and process it. (There is almost no delay between receiving data and pushing data.) Briefly speaking, "Data in motion" is more likely to select data which is necessary for our requirement. "Data at rest" is to collect all data and try to find something fits our requirement. 
 
-To be continued 
-
 2021/7/29
+
+## Some basic about Apache Kafka 
+
+This section will have mutiple source from the offical site of Apache Kafka. You can visit it's site https://kafka.apache.org/ to have a full version of Apache Kafka.
+
+### Event streaming
+
+Event streaming is the digital equivalent of the human body's central nervous system. It is the technological foundation for the 'always-on' world where businesses are increasingly software-defined and automated, and where the user of software is more software.
+
+Technically speaking, event streaming is the practice of capturing data in real-time from event sources like databases, sensors, mobile devices, cloud services, and software applications in the form of streams of events; storing these event streams durably for later retrieval; manipulating, processing, and reacting to the event streams in real-time as well as retrospectively; and routing the event streams to different destination technologies as needed. Event streaming thus ensures a continuous flow and interpretation of data so that the right information is at the right place, at the right time.
 
 ## Extra Reading
 
-### 	Transactional events and Non-Transactional events
+### Transactional events and Non-Transactional events
 
-​			Basically speaking, the defination of transactional events is 
+​			By searching in Google, we can get the defination of transactional events (information) form http://www.computerbusinessresearch.com/.			
+
+> ​		Transactional information is all the information contained within a business unit. The primary purpose of transactional information is to support day-to-day operations of the unit. Examples of transactional information include: sales receipt, packing slip, purchase confirmation, etc. 
+
+So, the defination of non-transactional events are very simple. It is just those "Non"- transactional events. Let me give some examples. (From https://stackoverflow.com/questions/18884728/difference-between-transactional-and-non-transactional)
+
+> Non -Transactional (These information are relevant to enterprise for longer duration than Transactional Data.)
+>
+> - Customer: Name, Preferences
+> - Product: Name, Hierarchy
+> - Site/Location: Addresses
+> - Account: Contracts Detail
+>
+> Transactional (Has a Time Dimension, and becomes historical once the transaction is complete)
+>
+> - Financial: orders, invoices, payments
